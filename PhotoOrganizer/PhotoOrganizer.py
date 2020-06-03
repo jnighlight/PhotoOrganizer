@@ -118,7 +118,7 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"i:o:dl",["idir=","odir="])
     except getopt.GetoptError:
-        print ("PhotoOrganizer.py -i <inputdirectory> -o <outputdirectory>")
+        print ("PhotoOrganizer.py -i <inputdirectory> -o <outputdirectory> -d -l")
         sys.exit(2)
     for opt, arg in opts:
         if opt in ("-i", "--idir"):
@@ -130,7 +130,7 @@ def main(argv):
         elif opt == "-l":
             logFile = True
     if not inDir or not outDir:
-        print ("PhotoOrganizer.py -i <inputdirectory> -o <outputdirectory>")
+        print ("PhotoOrganizer.py -i <inputdirectory> -o <outputdirectory> -d -l")
         sys.exit(2)
 
     duplicateDir = outDir + "\\duplicates"
